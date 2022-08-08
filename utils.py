@@ -1,15 +1,8 @@
 '''Task 0: Import the modules csv and random'''
+import csv, random
 
-
-def startup():    
-    """
-    Task 1: Display an entry message.
-
-    The message should consist of the of the name of your application centered in the middle of the console.
-
-    :return: Does not return anything.
-    """
-
+def startup():
+    print("\t"*5, "Pokemon Trainer APP")
 
 def options():
     """
@@ -20,7 +13,10 @@ def options():
 
     :return: None if invalid selection otherwise an integer corresponding to a valid selection
     """
-
+    print("Choose an item from the menu:\n1-Check your Pokemon\n2-Add a new Pokemon\n3-Show all Pokemon\n4-Visualise\n5-Save your Pokedex\n0-Exit")
+    opt  = int(input("Your option: "))
+    if opt in [1,2,3,4,5,0]:
+        return opt
 
 def check_poke():
     """
@@ -31,7 +27,10 @@ def check_poke():
 
     :return: None if an invalid selection made otherwise an integer corresponding to a valid option
     """
-
+    print("How would you like to search?:\n1-By Name\n2-By Type")
+    opt  = int(input("Your option: "))
+    if opt in [1,2]:
+        return opt
 
 def add_poke():
     """
@@ -42,6 +41,10 @@ def add_poke():
 
     :return: None if an invalid selection made otherwise an integer corresponding to a valid option
     """
+    print("How would you like to add a Pokemon?:\n1-Add Specific\n2-Add at Random")
+    opt  = int(input("Your option: "))
+    if opt in [1,2]:
+        return opt
 
 def visualise():
     """
@@ -52,6 +55,11 @@ def visualise():
 
     :return: None if an invalid selection made otherwise an integer corresponding to a valid option
     """
+    print("How would you like to visualise your Pokemon?\n1-By Generation (Pie Chart)\n2-By Type (Bar Chart")
+    opt  = int(input("Your option: "))
+    if opt in [1,2]:
+        return opt
+
 
 def by_name(p_list = []):
     
