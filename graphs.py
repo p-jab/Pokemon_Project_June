@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 def pie_chart(pokedex = []):
     """
     Task 27: Create a Pie Chart showing pokemon from pokedex sorted by their generation
@@ -8,6 +9,13 @@ def pie_chart(pokedex = []):
     :param pokedex: list of pokemon
     :return: None
     """
+    p_dict = {} # = {"2": 7, "6":11, "1": 5}
+    for pokemon in pokedex:
+        p_dict[pokemon[11]] = p_dict.get(pokemon[11], 0) + 1
+    p_labels = [f"Generation {x}" for x in p_dict.keys()]
+    plt.pie(p_dict.values(), labels=p_labels, autopct="%1.0f%%")
+    plt.title("Pokemon by Generation")
+    plt.show()
 
 def bar_chart(pokedex = []):
     """
