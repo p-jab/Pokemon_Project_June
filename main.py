@@ -1,15 +1,16 @@
 '''Task 12: Import the modules utils and visual'''
-
+from utils import *
+from graphs import *
 '''Task 13: Create an empty list named 'pokedex'.
     This will be used to store your pokemon. '''
-
+pokedex = []
 
 def run():
    
     '''
     Task 14: Call the function startup from the module utils.
     '''
-
+    startup()
     '''
     Task 15: Populate the pokedex list from pokedex.csv file, using an appropriate 
     function from utils module.
